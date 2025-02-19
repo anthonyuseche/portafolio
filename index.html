@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony José Useche Ruiz - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="modal-overlay" class="modal-overlay"></div>
+    <div id="project-modal" class="modal">
+        <button class="modal-close" onclick="closeModal()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <div class="modal-content">
+            <img src="" alt="" class="modal-image">
+            <div class="modal-info">
+                <h2 class="modal-title"></h2>
+                <p class="modal-description"></p>
+                <div class="modal-details">
+                    <div class="tech-stack">
+                        <h3>Tecnologías Utilizadas</h3>
+                        <ul class="tech-list"></ul>
+                    </div>
+                    <div class="project-features">
+                        <h3>Características Principales</h3>
+                        <ul class="features-list"></ul>
+                    </div>
+                </div>
+                <div class="modal-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="demo-link">Ver Demo</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="github-link">Ver Código</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">AUR</div>
+                <div class="nav-links">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="https://wa.me/yourphone" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/></svg>
+                    </a>
+                    <button class="contact-btn" onclick="scrollToContact()">Contacto</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="avatar"></div>
+                    <div class="title-wrapper">
+                        <h1 class="title" id="animated-title">Anthony José Useche Ruiz</h1>
+                        <div class="cursor"></div>
+                    </div>
+                    <p class="description">15 años de experiencia en Desarrollo Web. Programador Senior especializado en JavaScript, HTML, CSS y WordPress. Experto en aceleración de tiempos de carga y solución de errores en WordPress.</p>
+                    <div class="hero-buttons">
+                        <button class="primary-btn" onclick="scrollToPortfolio()">Ver Portafolio</button>
+                        <button class="secondary-btn">Descargar CV</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Portafolio</h2>
+                    <p class="section-description">Una muestra de los proyectos más destacados en los que he trabajado</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" onclick="openProjectModal(0)">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="E-commerce Platform">
+                            <div class="project-overlay">
+                                <h3>E-commerce Platform</h3>
+                                <p>A full-featured online store with real-time inventory management</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" onclick="openProjectModal(1)">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Educational Platform">
+                            <div class="project-overlay">
+                                <h3>Educational Platform</h3>
+                                <p>Online learning management system with video streaming</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" onclick="openProjectModal(2)">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Healthcare App">
+                            <div class="project-overlay">
+                                <h3>Healthcare App</h3>
+                                <p>Telemedicine platform for remote patient care</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <button class="scroll-top" onclick="scrollToTop()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+            </button>
+            <div class="social-links">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="https://wa.me/yourphone" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/></svg>
+                </a>
+            </div>
+            <p class="copyright">© 2023 Anthony José Useche Ruiz. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
